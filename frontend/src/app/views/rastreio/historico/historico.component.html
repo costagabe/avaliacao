@@ -1,0 +1,14 @@
+<div fxLayoutAlign="center">
+  <div fxFlex="50">
+    <h3 *ngIf="!historicos.length">Sem históricos para exibir</h3>
+    <div fxLayout="row" fxLayoutAlign="space-between" *ngFor="let historico of historicos" class="historico">
+      <div fxFlex="nogrow">
+        {{historico.descricao}}
+      </div>
+      <div fxFlex="nogrow">
+        {{historico.data | date:"dd/MM/YYYY HH:mm"}}
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,6 @@
+export enum Situacao {
+  EXTRAVIADO = "EXTRAVIADO",
+  RECEBIDO = "RECEBIDO",
+  EM_PERCURSO = "EM_PERCURSO",
+  ENTREGUE = "ENTREGUE"
+}

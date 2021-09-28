@@ -1,0 +1,15 @@
+<div *ngIf="notFound" fxLayout="row" fxLayoutAlign="center center">
+  <h1>Código não encontrado</h1>
+</div>
+<div [routerLink]="'/'" fxLayout="row" fxLayoutAlign="center center">
+  <a href="#"> <h3>Voltar</h3></a>
+</div>
+<div *ngIf="!notFound">
+  <div fxLayout="row" fxLayoutAlign="center">
+    <h1>{{titulo}}</h1>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center">
+    <img *ngIf="imagem" [src]="'assets/'+imagem" alt="rastreio"/>
+  </div>
+  <app-historico *ngIf="rastreio.historicos" [historicos]="rastreio.historicos"></app-historico>
+</div>
